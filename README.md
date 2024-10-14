@@ -7,6 +7,7 @@
 pip install pyserial
 ```
 ## circuit connections
+
 You can see the connection on [Tinkercad](https://www.tinkercad.com/things/fjgFFRaHzuD-measuretask2teams)
 
 ![Circuit](https://github.com/user-attachments/assets/2fce0fbf-5783-41cb-9eba-a086e89594ba)
@@ -17,10 +18,17 @@ You can see the connection on [Tinkercad](https://www.tinkercad.com/things/fjgFF
 
 
 ## configuration variables
-```cpp
-#define LOOP_COUNT 1000
-#define CYCLE_TIME_MILLIS 100
-```
-in the [task_2.ino](https://github.com/notZeroDev/measurement_task_2_teams/blob/main/task_2.ino) file you will find the first two defines is to control the skitch :
-1. ```LOOP_COUNT``` to control how many row in results file will be generated
-2. ```CYCLE_TIME_MILLIS``` to control how long the cylce will last in milliseconds
+**python:**
+  ```python
+  serial_port = 'COM5'  # Change this to your port
+  ```
+ 🔴🔴 You must change the value of ```serial_port``` variable to the port that is the board connected to
+  
+**arduino code:**
+  ```cpp
+  #define LOOP_COUNT 1000
+  #define CYCLE_TIME_MILLIS 100
+  ```
+  in the [task_2.ino](https://github.com/notZeroDev/measurement_task_2_teams/blob/main/task_2.ino) file you will find the first two defines is to control the skitch :
+  1. ```LOOP_COUNT``` to control how many row in results file will be generated
+  2. ```CYCLE_TIME_MILLIS``` to control how long the cylce will last in milliseconds
