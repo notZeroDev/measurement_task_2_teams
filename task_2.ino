@@ -1,5 +1,5 @@
 //configurations variables
-#define LOOP_COUNT 1000
+#define LOOP_COUNT 200
 #define CYCLE_TIME_MILLIS 100
 
 // Define pins for ultrasonic sensor
@@ -9,7 +9,7 @@ const int outputLed = 5;
 const int startButton = 6;
 
 // function protorype
-int calcDistance();
+double calcDistance();
 
 
 void setup() {
@@ -66,7 +66,7 @@ void loop() {
 }
 
 //function define
-int calcDistance(){
+double calcDistance(){
   // Clear the trigger pin
       digitalWrite(trigPin, LOW);
       delayMicroseconds(2);
@@ -82,6 +82,6 @@ int calcDistance(){
       // Calculate the distance in centimeters
       // Speed of sound is 343 m/s or 34300 cm/s
       // Distance = (duration * speed of sound) / 2, because the signal goes and returns
-      long distanceCm = duration * 0.034 / 2;
+      double distanceCm = duration * 0.034 / 2;
       return distanceCm;
 }
