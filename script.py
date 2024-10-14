@@ -18,6 +18,7 @@ except serial.SerialException:
 def output(line):
     global i, file, TRIES
     mode, value = line.split(); # convert the line into mode and value
+    print(line, line.split(), mode, value)
     if mode == 's':
         # tries data
         print('/'*50)
@@ -45,7 +46,7 @@ def output(line):
         # ending of recording data and close the file
         if i == TRIES:
             file.close()
-            print('results.csv is done')
+            print('results.csv is created')
             print('to reset the file press reset button on the board')
             
 # Function to read data from the serial port
