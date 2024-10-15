@@ -1,5 +1,5 @@
 //configurations variables
-#define LOOP_COUNT 200
+#define LOOP_COUNT 1000
 #define CYCLE_TIME_MILLIS 100
 
 // Define pins for ultrasonic sensor
