@@ -18,7 +18,6 @@ except serial.SerialException:
 def output(line):
     global i, file, TRIES
     mode, value = line.split(); # convert the line into mode and value
-    print(line, line.split(), mode, value)
     if mode == 's':
         # tries data
         print('/'*50)
