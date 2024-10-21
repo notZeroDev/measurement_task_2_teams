@@ -13,9 +13,6 @@ double calcDistance();
 
 
 void setup() {
-  // This delay is used for stable calibration ouptut in terminal
-  delay(100);
-  
   // Initialize serial communication for debugging
   Serial.begin(115200);
 
@@ -41,6 +38,9 @@ void setup() {
 int state = 1; // state is used to make the code runs only once
 
 void loop() {
+  // This delay is used for stable calibration ouptut in terminal
+  delay(100);
+  
   if(state){ // checks if we on the first excutes
 
   // sending data for calibraion
