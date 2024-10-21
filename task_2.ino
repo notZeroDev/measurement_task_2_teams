@@ -13,6 +13,9 @@ double calcDistance();
 
 
 void setup() {
+  // This delay is used for stable calibration ouptut in terminal
+  delay(100);
+  
   // Initialize serial communication for debugging
   Serial.begin(115200);
 
