@@ -1,11 +1,16 @@
 import serial
 import time
+import os
 
 # configuration variables
-serial_port = 'COM5'  # Change this to your port
+serial_port = 'COM4'  # Change this to your port
 baud_rate = 115200 # change this to your Serial port
 i = 0
 TRIES = 20
+
+# Ensure the file is created in the script's directory
+script_dir = os.path.dirname(os.path.realpath(__file__))  # Get the directory where the script is located
+file_path = os.path.join(script_dir, 'results.csv')  # Create the full file path
 
 # Create a serial connection
 try:
@@ -36,7 +41,7 @@ def output(line):
     elif mode == 'r':
         # recording mode
         if i == 0:
-            file = open('results.csv', 'w')
+            file = open(file_path, 'w')
             file.write("i,value\n")
         i += 1
         print(f'{i} Recorded: {value} cm')
